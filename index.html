@@ -1,53 +1,52 @@
 <!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Yağmur İçin Doğum Günü 🌹</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg1:#fff0f3;
-      --accent:#b3003b;
-      --accent-2:#ff4d6d;
-      --soft:#ffe6eb;
-      --radius:18px;
-    }
-    *{box-sizing:border-box;}
-    body{margin:0;font-family:'Quicksand',sans-serif;background:linear-gradient(180deg,var(--bg1),#ffeef4);color:#3a1220;overflow-x:hidden;}
-    header{position:fixed;left:0;top:0;bottom:0;width:220px;background:linear-gradient(180deg,var(--accent-2),var(--accent));padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px;z-index:100;}
-    header h1{font-family:'Playfair Display';color:white;font-size:18px;text-align:center;margin:0;}
-    nav{display:flex;flex-direction:column;width:100%;gap:8px;margin-top:20px;}
-    nav a{color:white;text-decoration:none;padding:10px 14px;margin:0 12px;border-radius:12px;font-weight:600;text-align:center;transition:0.2s;background:rgba(255,255,255,0.1);}
-    nav a:hover{background:rgba(255,255,255,0.3);transform:scale(1.05);}
-    main{margin-left:220px;padding:40px 20px;min-height:100vh;}
-    section{display:none;animation:fadeIn 0.4s forwards;min-height:80vh;}
-    section.active{display:block;}
-    @keyframes fadeIn{from{opacity:0} to{opacity:1}}
-    h2{font-family:'Playfair Display';color:var(--accent);margin-bottom:12px;font-size:28px;}
-    p{line-height:1.6;color:#501829;}
-    .btn{display:inline-block;margin-top:16px;padding:10px 16px;background:linear-gradient(180deg,var(--accent-2),var(--accent));color:white;border-radius:12px;font-weight:700;text-decoration:none;cursor:pointer;}
-    .message-box{background:white;padding:20px;border-radius:var(--radius);box-shadow:0 4px 20px rgba(179,0,59,0.15);}
-    .typewriter{white-space:pre-wrap;line-height:1.7;min-height:120px;color:#4b1a2a;}
-    /* Gül efektleri */
-    .rose-container{position:relative;height:400px;overflow:hidden;margin-top:20px;}
-    .rose{position:absolute;font-size:20px;top:-40px;animation:fall linear infinite;}
-    @keyframes fall{to{transform:translateY(450px) rotate(360deg);opacity:0;}}
-    footer{text-align:center;padding:20px;color:#8a3447;}
-    @media(max-width:768px){header{width:60px;gap:6px}header h1{display:none;}main{margin-left:60px;padding:20px;}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yağmur İçin Doğum Günü 🌹</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg1:#fff0f3;
+  --accent:#b3003b;
+  --accent-2:#ff4d6d;
+  --soft:#ffe6eb;
+  --radius:18px;
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:'Quicksand',sans-serif;background:linear-gradient(180deg,var(--bg1),#ffeef4);color:#3a1220;overflow-x:hidden;}
+header{position:fixed;left:0;top:0;bottom:0;width:220px;background:linear-gradient(180deg,var(--accent-2),var(--accent));padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px;z-index:100;}
+header h1{font-family:'Playfair Display';color:white;font-size:18px;text-align:center;margin:0;}
+nav{display:flex;flex-direction:column;width:100%;gap:8px;margin-top:20px;}
+nav a{color:white;text-decoration:none;padding:10px 14px;margin:0 12px;border-radius:12px;font-weight:600;text-align:center;transition:0.2s;background:rgba(255,255,255,0.1);cursor:pointer;}
+nav a:hover{background:rgba(255,255,255,0.3);transform:scale(1.05);}
+main{margin-left:220px;padding:40px 20px;min-height:100vh;}
+section{display:none;animation:fadeIn 0.4s forwards;min-height:80vh;}
+section.active{display:block;}
+@keyframes fadeIn{from{opacity:0} to{opacity:1}}
+h2{font-family:'Playfair Display';color:var(--accent);margin-bottom:12px;font-size:28px;}
+p{line-height:1.6;color:#501829;}
+.btn{display:inline-block;margin-top:16px;padding:10px 16px;background:linear-gradient(180deg,var(--accent-2),var(--accent));color:white;border-radius:12px;font-weight:700;text-decoration:none;cursor:pointer;}
+.message-box{background:white;padding:20px;border-radius:var(--radius);box-shadow:0 4px 20px rgba(179,0,59,0.15);}
+.typewriter{white-space:pre-wrap;line-height:1.7;min-height:120px;color:#4b1a2a;}
+.rose-container{position:relative;height:400px;overflow:hidden;margin-top:20px;}
+.rose{position:absolute;font-size:20px;top:-40px;animation:fall linear infinite;}
+@keyframes fall{to{transform:translateY(450px) rotate(360deg);opacity:0;}}
+footer{text-align:center;padding:20px;color:#8a3447;}
+@media(max-width:768px){header{width:60px;gap:6px}header h1{display:none;}main{margin-left:60px;padding:20px;}}
+</style>
 </head>
 <body>
 
 <header>
   <h1>🌹 Yağmur’un Doğum Günü 🌹</h1>
   <nav>
-    <a href="#" data-target="home">Ana Sayfa</a>
-    <a href="#" data-target="tany">Tanıştığımız Gün</a>
-    <a href="#" data-target="sevgili">Sevgili Olduğumuz Gün</a>
-    <a href="#" data-target="mesaj">Mesajım</a>
-    <a href="#" data-target="surprise">Sürpriz</a>
-    <a href="#" data-target="cikmateklifi">Çıkma Teklifi</a>
+    <a data-target="home">Ana Sayfa</a>
+    <a data-target="tany">Tanıştığımız Gün</a>
+    <a data-target="sevgili">Sevgili Olduğumuz Gün</a>
+    <a data-target="mesaj">Mesajım</a>
+    <a data-target="surprise">Sürpriz</a>
+    <a data-target="cikmateklifi">Çıkma Teklifi</a>
   </nav>
 </header>
 
@@ -95,17 +94,23 @@
 
 <script>
   // Menü tıklayınca bölümleri aç
+  document.querySelectorAll('nav a').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const id = e.target.getAttribute('data-target');
+      showSection(id);
+    });
+  });
+
   function showSection(id){
     document.querySelectorAll('main section').forEach(s=>s.classList.remove('active'));
     document.getElementById(id).classList.add('active');
-    window.scrollTo(0,0);
   }
 
-  // Mesaj typewriter
+  // Typewriter mesaj otomatik başlıyor
   const text = `Yağmurum Güzel Kızım Her Ne Kadar Kötü Ve Zor Zamanlardan Geçsekde Okadar Şey Yaşayıp Birbirimizden Ayrıda Kalsak Biz Asla Kopamadık Birbirimizden Ve Birbirimizi Biz Çok Seviyoruz Aslada Kopamayacağız Okadar Hayal Kurduk Hiçbirini Yaşamadan Ölmeyelim İstiyorum Seni Yeri Geldi Mutlu Ettim Yeri Geldi Güldürdüm Yeri Geldi Üzdüm Ve Ağlattım Bunlar İçin Çok Üzgünüm Çok Pişmanım Ama Ben Bunca Şeyden Sonra Anladımki Senin Bana Verdiğin O Değeri Ve Sevgiyi Ben Asla O Sevgiyi Kaybetmemek İçin Elimden Geleni Yapmaya Çalışıcam Sen Benim Şu Hayatta Tanıdığım En Karakterli En Güzel En Mükemmel İnsansın Seni Tanıdığım İçin Çok Mutluyum Prensesim Seni Çok Seviyorum 💖`;
   let i=0;
   function type(){if(i<text.length){document.getElementById('typed').textContent+=text.charAt(i);i++;setTimeout(type,30);}}
-  window.addEventListener('scroll',()=>{if(document.getElementById('typed').getBoundingClientRect().top<window.innerHeight && i===0) type();});
+  document.addEventListener('DOMContentLoaded', type);
 
   // Sürpriz güller otomatik
   const container = document.getElementById('rose-container');
