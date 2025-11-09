@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Yağmur İçin Doğum Günü Sitesi 🌹</title>
+  <title>Yağmur İçin Doğum Günü 🌹</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -29,9 +29,9 @@
     .btn{display:inline-block;margin-top:16px;padding:10px 16px;background:linear-gradient(180deg,var(--accent-2),var(--accent));color:white;border-radius:12px;font-weight:700;text-decoration:none;cursor:pointer;}
     .message-box{background:white;padding:20px;border-radius:var(--radius);box-shadow:0 4px 20px rgba(179,0,59,0.15);}
     .typewriter{white-space:pre-wrap;line-height:1.7;min-height:120px;color:#4b1a2a;}
-    /* Sürpriz güller */
+    /* Gül efektleri */
     .rose-container{position:relative;height:400px;overflow:hidden;margin-top:20px;}
-    .rose{position:absolute;font-size:20px;top:-40px;animation:fall 5s linear infinite;}
+    .rose{position:absolute;font-size:20px;top:-40px;animation:fall linear infinite;}
     @keyframes fall{to{transform:translateY(450px) rotate(360deg);opacity:0;}}
     footer{text-align:center;padding:20px;color:#8a3447;}
     @media(max-width:768px){header{width:60px;gap:6px}header h1{display:none;}main{margin-left:60px;padding:20px;}}
@@ -76,8 +76,7 @@
 
   <section id="surprise">
     <h2>Sürpriz 🌹</h2>
-    <p><strong>Hazırsan bas ve seni güllerle boğayım 🌹</strong></p>
-    <span class="btn" id="show-roses">Gülleri Göster</span>
+    <p><strong>Hazırsan seni güllerle boğacağım 🌹</strong></p>
     <div class="rose-container" id="rose-container"></div>
   </section>
 
@@ -95,7 +94,7 @@
 <footer>Bu site Yağmur için hazırlandı ❤️</footer>
 
 <script>
-  // Menü tıklayınca sayfa değişimi
+  // Menü tıklayınca bölümleri aç
   function showSection(id){
     document.querySelectorAll('main section').forEach(s=>s.classList.remove('active'));
     document.getElementById(id).classList.add('active');
@@ -108,10 +107,10 @@
   function type(){if(i<text.length){document.getElementById('typed').textContent+=text.charAt(i);i++;setTimeout(type,30);}}
   window.addEventListener('scroll',()=>{if(document.getElementById('typed').getBoundingClientRect().top<window.innerHeight && i===0) type();});
 
-  // Sürpriz güller
-  document.getElementById('show-roses').addEventListener('click',()=>{
-    const container = document.getElementById('rose-container');
-    for(let i=0;i<50;i++){
+  // Sürpriz güller otomatik
+  const container = document.getElementById('rose-container');
+  function spawnRoses(){
+    for(let i=0;i<70;i++){
       const r=document.createElement('div');
       r.className='rose';
       r.textContent='🌹';
@@ -121,7 +120,8 @@
       container.appendChild(r);
       setTimeout(()=>r.remove(),5000);
     }
-  });
+  }
+  setInterval(spawnRoses,300); // sürekli güller yağacak
 </script>
 
 </body>
