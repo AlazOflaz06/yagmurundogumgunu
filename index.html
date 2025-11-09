@@ -1,140 +1,62 @@
 <!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>İyi ki doğdun Yağmur ❤️</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Yağmur İçin Doğum Günü Sitesi 🌹</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg1: #fff0f3;
-      --accent: #b3003b;
-      --accent-2: #ff4d6d;
-      --soft: #ffe6eb;
-      --radius: 18px;
+      --bg1:#fff0f3;
+      --accent:#b3003b;
+      --accent-2:#ff4d6d;
+      --soft:#ffe6eb;
+      --radius:18px;
     }
-    * { box-sizing: border-box; scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(180deg, var(--bg1), #ffeef4);
-      color: #3a1220;
-    }
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      background: rgba(255,255,255,0.8);
-      backdrop-filter: blur(8px);
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 12px 20px;
-      z-index: 100;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    .logo { font-family: 'Playfair Display'; color: var(--accent); font-size: 20px; }
-    nav { display: flex; gap: 10px; flex-wrap: wrap; }
-    nav a {
-      text-decoration: none; background: linear-gradient(180deg,var(--accent-2),var(--accent));
-      color: white; padding: 8px 14px; border-radius: 12px; font-weight: 600; transition: 0.2s;
-    }
-    nav a:hover { transform: scale(1.05); }
-    main { padding-top: 90px; }
-
-    section {
-      padding: 60px 20px;
-      text-align: center;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    h2 { font-family: 'Playfair Display'; color: var(--accent); font-size: 32px; margin-bottom: 10px; }
-    p { line-height: 1.6; color: #501829; }
-
-    .btn {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 10px 16px;
-      background: linear-gradient(180deg,var(--accent-2),var(--accent));
-      color: white; border-radius: 12px; font-weight: 700; text-decoration: none;
-    }
-
-    footer { text-align: center; padding: 20px; color: #8a3447; }
-
-    /* Gül ve kalp efektleri */
-    .petal {
-      position: fixed;
-      top: -10vh;
-      font-size: 20px;
-      animation: fall linear infinite;
-      pointer-events: none;
-      opacity: 0.8;
-    }
-    @keyframes fall {
-      to {
-        transform: translateY(110vh) rotate(720deg);
-        opacity: 0;
-      }
-    }
-
-    /* Mesaj yazma efekti */
-    .message-box {
-      background: white;
-      border-radius: var(--radius);
-      box-shadow: 0 4px 20px rgba(179,0,59,0.15);
-      padding: 20px;
-    }
-    .typewriter {
-      white-space: pre-wrap;
-      font-size: 16px;
-      line-height: 1.7;
-      text-align: left;
-      color: #4b1a2a;
-      min-height: 120px;
-    }
-
-    .modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-      display: flex; align-items: center; justify-content: center;
-      opacity: 0; pointer-events: none; transition: 0.3s;
-      z-index: 200;
-    }
-    .modal.open { opacity: 1; pointer-events: all; }
-    .modal .box {
-      background: white;
-      border-radius: 18px;
-      padding: 30px;
-      text-align: center;
-      max-width: 600px;
-      width: 90%;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    }
-
-    @keyframes rise {
-      to { transform: translateY(-400px) rotate(-60deg); opacity: 0; }
-    }
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:'Quicksand',sans-serif;background:linear-gradient(180deg,var(--bg1),#ffeef4);color:#3a1220;overflow-x:hidden;}
+    header{position:fixed;left:0;top:0;bottom:0;width:220px;background:linear-gradient(180deg,var(--accent-2),var(--accent));padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px;z-index:100;}
+    header h1{font-family:'Playfair Display';color:white;font-size:18px;text-align:center;margin:0;}
+    nav{display:flex;flex-direction:column;width:100%;gap:8px;margin-top:20px;}
+    nav a{color:white;text-decoration:none;padding:10px 14px;margin:0 12px;border-radius:12px;font-weight:600;text-align:center;transition:0.2s;background:rgba(255,255,255,0.1);}
+    nav a:hover{background:rgba(255,255,255,0.3);transform:scale(1.05);}
+    main{margin-left:220px;padding:40px 20px;min-height:100vh;}
+    section{display:none;animation:fadeIn 0.4s forwards;min-height:80vh;}
+    section.active{display:block;}
+    @keyframes fadeIn{from{opacity:0} to{opacity:1}}
+    h2{font-family:'Playfair Display';color:var(--accent);margin-bottom:12px;font-size:28px;}
+    p{line-height:1.6;color:#501829;}
+    .btn{display:inline-block;margin-top:16px;padding:10px 16px;background:linear-gradient(180deg,var(--accent-2),var(--accent));color:white;border-radius:12px;font-weight:700;text-decoration:none;cursor:pointer;}
+    .message-box{background:white;padding:20px;border-radius:var(--radius);box-shadow:0 4px 20px rgba(179,0,59,0.15);}
+    .typewriter{white-space:pre-wrap;line-height:1.7;min-height:120px;color:#4b1a2a;}
+    /* Sürpriz güller */
+    .rose-container{position:relative;height:400px;overflow:hidden;margin-top:20px;}
+    .rose{position:absolute;font-size:20px;top:-40px;animation:fall 5s linear infinite;}
+    @keyframes fall{to{transform:translateY(450px) rotate(360deg);opacity:0;}}
+    footer{text-align:center;padding:20px;color:#8a3447;}
+    @media(max-width:768px){header{width:60px;gap:6px}header h1{display:none;}main{margin-left:60px;padding:20px;}}
   </style>
 </head>
 <body>
+
 <header>
-  <div class="logo">🌹 Yağmur’un Doğum Günü 🌹</div>
+  <h1>🌹 Yağmur’un Doğum Günü 🌹</h1>
   <nav>
-    <a href="#home">Ana Sayfa</a>
-    <a href="#tany">Tanıştığımız Gün</a>
-    <a href="#sevgili">Sevgili Olduğumuz Gün</a>
-    <a href="#cikmateklifi">Çıkma Teklifi</a>
-    <a href="#surprise">Sürpriz</a>
-    <a href="#mesaj">Mesajım</a>
+    <a href="#" data-target="home">Ana Sayfa</a>
+    <a href="#" data-target="tany">Tanıştığımız Gün</a>
+    <a href="#" data-target="sevgili">Sevgili Olduğumuz Gün</a>
+    <a href="#" data-target="mesaj">Mesajım</a>
+    <a href="#" data-target="surprise">Sürpriz</a>
+    <a href="#" data-target="cikmateklifi">Çıkma Teklifi</a>
   </nav>
 </header>
 
-<main id="home">
-  <section>
+<main>
+  <section id="home" class="active">
     <h2>İyi ki doğdun Yağmur 🎂</h2>
     <p>Seninle geçen her gün bir armağan. Bu site, senin doğum günün için özel hazırlandı. ❤️</p>
-    <p><a class="btn" href="#mesaj">Mesajı Gör</a> <a class="btn" href="#surprise">Sürprizi Aç</a></p>
-    <p style="margin-top:14px; color:#b3003b; font-weight:600;">
-      Tanıştık: 17 Aralık • Sevgili olduk: 15 Mayıs
-    </p>
+    <p><span class="btn" onclick="showSection('mesaj')">Mesajımı Göster</span> <span class="btn" onclick="showSection('surprise')">Sürprizi Aç</span></p>
+    <p style="margin-top:14px; color:#b3003b; font-weight:600;">Tanıştık: 17 Aralık • Sevgili olduk: 15 Mayıs</p>
   </section>
 
   <section id="tany">
@@ -147,98 +69,60 @@
     <p>15 Mayıs... Hayatımın en güzel “evet”lerinden biri. O günden beri her şey daha anlamlı.</p>
   </section>
 
-  <section id="cikmateklifi">
-    <h2>Çıkma Teklifi 💍</h2>
-    <p>Yağmur, sen benim hayatımın en güzel parçasısın.  
-    Bugün, geçmişimiz ve geleceğimiz için bir adım daha atmak istiyorum.</p>
-    <p style="font-size:22px; color:var(--accent-2); font-weight:700;">Benimle çıkar mısın? 💖</p>
-    <p>
-      <a class="btn" onclick="alert('Yağmur evet dedi! 💞')">Evet 💕</a>
-      <a class="btn" style="background:linear-gradient(180deg,#ccc,#999)" onclick="alert('Belki sonra 😅')">Belki 😅</a>
-    </p>
+  <section id="mesaj">
+    <h2>Mesajım</h2>
+    <div class="message-box"><div class="typewriter" id="typed"></div></div>
   </section>
 
   <section id="surprise">
     <h2>Sürpriz 🌹</h2>
-    <p>Hazırsan, tıklayınca gökyüzü aşk dolacak 💖🌹</p>
-    <a class="btn" id="open-surprise">Sürprizi Göster</a>
+    <p><strong>Hazırsan bas ve seni güllerle boğayım 🌹</strong></p>
+    <span class="btn" id="show-roses">Gülleri Göster</span>
+    <div class="rose-container" id="rose-container"></div>
   </section>
 
-  <section id="mesaj">
-    <h2>Mesajım</h2>
-    <div class="message-box">
-      <div class="typewriter" id="typed"></div>
-    </div>
+  <section id="cikmateklifi">
+    <h2>Çıkma Teklifi 💍</h2>
+    <p>Yağmur, sen benim hayatımın en güzel parçasısın. Bugün, geçmişimiz ve geleceğimiz için bir adım daha atmak istiyorum.</p>
+    <p style="font-size:22px; color:var(--accent-2); font-weight:700;">Benimle çıkar mısın? 💖</p>
+    <p>
+      <span class="btn" onclick="alert('Yağmur evet dedi! 💞')">Evet 💕</span>
+      <span class="btn" style="background:linear-gradient(180deg,#ccc,#999)" onclick="alert('Belki sonra 😅')">Belki 😅</span>
+    </p>
   </section>
 </main>
 
 <footer>Bu site Yağmur için hazırlandı ❤️</footer>
 
-<div id="modal" class="modal">
-  <div class="box">
-    <h3 style="color:var(--accent)">🌹 Sürpriz Yağmur İçin 🌹</h3>
-    <p>Sen bu dünyanın en güzel çiçeğisin...</p>
-    <div id="riser" style="position:relative; height:300px; overflow:hidden;"></div>
-    <a class="btn" id="close-modal">Kapat</a>
-  </div>
-</div>
-
 <script>
-const text = `Yağmurum Güzel Kızım Her Ne Kadar Kötü Ve Zor Zamanlardan Geçsekde Okadar Şey Yaşayıp Birbirimizden Ayrıda Kalsak Biz Asla Kopamadık Birbirimizden Ve Birbirimizi Biz Çok Seviyoruz Aslada Kopamayacağız Okadar Hayal Kurduk Hiçbirini Yaşamadan Ölmeyelim İstiyorum Seni Yeri Geldi Mutlu Ettim Yeri Geldi Güldürdüm Yeri Geldi Üzdüm Ve Ağlattım Bunlar İçin Çok Üzgünüm Çok Pişmanım Ama Ben Bunca Şeyden Sonra Anladımki Senin Bana Verdiğin O Değeri Ve Sevgiyi Ben Asla O Sevgiyi Kaybetmemek İçin Elimden Geleni Yapmaya Çalışıcam Sen Benim Şu Hayatta Tanıdığım En Karakterli En Güzel En Mükemmel İnsansın Seni Tanıdığım İçin Çok Mutluyum Prensesim Seni Çok Seviyorum 💖`;
-
-let i = 0;
-const typed = document.getElementById("typed");
-function type() {
-  if (i < text.length) {
-    typed.textContent += text.charAt(i);
-    i++;
-    setTimeout(type, 30);
+  // Menü tıklayınca sayfa değişimi
+  function showSection(id){
+    document.querySelectorAll('main section').forEach(s=>s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    window.scrollTo(0,0);
   }
-}
-window.addEventListener("scroll", () => {
-  if (typed.getBoundingClientRect().top < window.innerHeight && i === 0) type();
-});
 
-// Gül yaprakları animasyonu
-for (let n = 0; n < 40; n++) {
-  const el = document.createElement("div");
-  el.className = "petal";
-  el.textContent = Math.random() > 0.4 ? "🌹" : "💖";
-  el.style.left = Math.random() * 100 + "vw";
-  el.style.animationDuration = 5 + Math.random() * 7 + "s";
-  el.style.fontSize = 16 + Math.random() * 24 + "px";
-  el.style.animationDelay = Math.random() * 5 + "s";
-  document.body.appendChild(el);
-}
+  // Mesaj typewriter
+  const text = `Yağmurum Güzel Kızım Her Ne Kadar Kötü Ve Zor Zamanlardan Geçsekde Okadar Şey Yaşayıp Birbirimizden Ayrıda Kalsak Biz Asla Kopamadık Birbirimizden Ve Birbirimizi Biz Çok Seviyoruz Aslada Kopamayacağız Okadar Hayal Kurduk Hiçbirini Yaşamadan Ölmeyelim İstiyorum Seni Yeri Geldi Mutlu Ettim Yeri Geldi Güldürdüm Yeri Geldi Üzdüm Ve Ağlattım Bunlar İçin Çok Üzgünüm Çok Pişmanım Ama Ben Bunca Şeyden Sonra Anladımki Senin Bana Verdiğin O Değeri Ve Sevgiyi Ben Asla O Sevgiyi Kaybetmemek İçin Elimden Geleni Yapmaya Çalışıcam Sen Benim Şu Hayatta Tanıdığım En Karakterli En Güzel En Mükemmel İnsansın Seni Tanıdığım İçin Çok Mutluyum Prensesim Seni Çok Seviyorum 💖`;
+  let i=0;
+  function type(){if(i<text.length){document.getElementById('typed').textContent+=text.charAt(i);i++;setTimeout(type,30);}}
+  window.addEventListener('scroll',()=>{if(document.getElementById('typed').getBoundingClientRect().top<window.innerHeight && i===0) type();});
 
-// Sürpriz penceresi
-const modal = document.getElementById("modal");
-document.getElementById("open-surprise").addEventListener("click", () => {
-  modal.classList.add("open");
-  startRising();
-});
-document.getElementById("close-modal").addEventListener("click", () => {
-  modal.classList.remove("open");
-  stopRising();
-});
-
-let timer;
-function startRising() {
-  const root = document.getElementById("riser");
-  root.innerHTML = "";
-  timer = setInterval(() => {
-    const e = document.createElement("div");
-    e.textContent = ["💖", "❤️", "🌹"][Math.floor(Math.random() * 3)];
-    e.style.position = "absolute";
-    e.style.left = Math.random() * 90 + "%";
-    e.style.bottom = "-20px";
-    e.style.fontSize = 20 + Math.random() * 24 + "px";
-    e.style.animation = "rise 5s linear";
-    root.appendChild(e);
-    setTimeout(() => e.remove(), 5000);
-  }, 150);
-}
-function stopRising() { clearInterval(timer); }
+  // Sürpriz güller
+  document.getElementById('show-roses').addEventListener('click',()=>{
+    const container = document.getElementById('rose-container');
+    for(let i=0;i<50;i++){
+      const r=document.createElement('div');
+      r.className='rose';
+      r.textContent='🌹';
+      r.style.left=Math.random()*90+'%';
+      r.style.fontSize=16+Math.random()*24+'px';
+      r.style.animationDuration=(4+Math.random()*4)+'s';
+      container.appendChild(r);
+      setTimeout(()=>r.remove(),5000);
+    }
+  });
 </script>
+
 </body>
 </html>
